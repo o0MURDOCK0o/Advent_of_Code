@@ -1,0 +1,16 @@
+avoc := proc(B::list)
+local m, n, i;
+   n := 0;
+   m := 0;     
+   for i in B do
+      if i > 0 then
+      	m := m+i
+      else if n<m then
+      	n := m;
+      	m := 0 
+      else m := 0
+      end if;
+      end if;	  
+   end do;
+  return n;
+end proc:

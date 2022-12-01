@@ -1,0 +1,16 @@
+avoc2 := proc(B::list)
+local m, n, i, A;
+   n := 0;
+   m := 0;
+   A := [];     
+   for i in B do
+      if i > 0 then
+      	m := m+i
+      else A:=[op(A),m]; m:=0 
+      end if;	  
+   end do;
+   A:=sort(A);
+   A:=[op(-3 .. -1,A)];
+   n:=add(A);
+  return n;
+end proc:
